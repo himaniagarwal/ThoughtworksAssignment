@@ -18,19 +18,24 @@ public class primeFactor
 		return false;
 	}
     }
-
-    public static void main(String args[]) throws IOException
+    public static void generate(int number)
     {
-        int number;
-	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-	number=Integer.parseInt(br.readLine());
-	for(int i=2;i<number;i++)
+        for(int i=2;i<number;i++)
 	{
 		if(is_prime(i)==true && number%i==0)
 		{
 			System.out.println(i);
 		}
 	}
+    }
+    
 
+    public static void main(String args[]) throws IOException
+    {
+        int number;
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	number=Integer.parseInt(br.readLine());
+        generate(number);
+	
     }
 }
